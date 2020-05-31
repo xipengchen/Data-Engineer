@@ -80,7 +80,7 @@ def download_mongo_dump_normalize_to_s3(ds, **kwargs):
     # Connect to production client and get data from db.collection
     
     logging.info("Connectting to the mongodb server")
-    client_production = MongoClient('mongodb://{}:{}@10.0.1.227:27017,10.0.1.228:27017,10.0.1.229:27017/edison-nye?replicaSet=orion-rs'.format(mongodb_username_staging, mongodb_password_staging))
+    client_production = MongoClient('")
     db = client_production['edison-nye']
     collection = db.books
     
