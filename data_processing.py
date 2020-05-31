@@ -27,10 +27,10 @@ import io
 import os
 import sys
 
-os.chdir('/home/ec2-user/retailer_pos_data_module/')
-sys.path.insert(0, '/home/ec2-user/retailer_pos_data_module/')
-#os.chdir('/Users/xchen/')
-#sys.path.insert(0, '/Users/xchen/')
+# os.chdir('/home/ec2-user/retailer_pos_data_module/')
+# sys.path.insert(0, '/home/ec2-user/retailer_pos_data_module/')
+os.chdir('/Users/xchen/')
+sys.path.insert(0, '/Users/xchen/')
 
 
 import os.path
@@ -52,7 +52,7 @@ start_date = '2018-01-01'
 def determine_traffic_date_to_fetch(ds, **kwargs):
     # function to fetch the date
     # connect to Amazon s3
-    engine = create_engine('postgresql://%s:%s@sailthru-data.cmpnfzedptft.us-east-1.redshift.amazonaws.com:5439/sailthrudata'%(redshift_user, redshift_password))
+    engine = create_engine("engine link")
     
     table_dates_query = ("select distinct(date) from amazon_traffic_diagnostic_monthly")
     
